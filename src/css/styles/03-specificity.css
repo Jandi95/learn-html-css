@@ -1,0 +1,39 @@
+/* 상속 */
+.wrapper {
+  color: green;
+  border: 1px solid red;
+}
+
+/* #container p {
+  color: teal;
+} */
+
+.wrapper p {
+  border: inherit;
+}
+
+/* 겹침 (상속으로 인한) */
+body {
+  color: red;
+}
+
+/* 겹침, 우선순위(선택자) */
+.ai.copilot {
+  color: purple;
+}
+
+.ai {
+  color: red;
+}
+
+p {
+  color: gray;
+}
+
+p {
+  color: orange;
+}
+
+p {
+  color: pink;
+}
