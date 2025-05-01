@@ -1,0 +1,78 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* 전체 선택자 */
+* {
+  font-weight: 300;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+
+/* 태그 선택자 - Type selectors */
+p {
+  color: blue;
+}
+
+.like {
+  font-size: 24px;
+  color: red;
+}
+
+#lion {
+  background-color: yellow;
+}
+
+p[title] {
+  border: 1px solid red;
+}
+
+div p {
+  border: 1px solid yellowgreen;
+  padding: 10px;
+}
+
+div .combinator {
+  color: green;
+}
+
+ul > li {
+  border: 1px solid #121212;
+}
+
+/* 인접 형제 결합자 */
+h2 + p {
+  font-style: italic;
+}
+
+/* 일반 형제 결합자 */
+div ~ p {
+  font-weight: 700;
+}
+
+/* 가상 요소 선택자 */
+section {
+  border: 5px solid purple;
+  padding: 20px;
+  margin: 20px;
+}
+section::before {
+  content: '멋쟁이 사자처럼';
+  color: red;
+}
+section::after {
+  content: '프론트엔드 부트캠프';
+  color: green;
+}
