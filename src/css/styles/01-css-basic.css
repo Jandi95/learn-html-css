@@ -1,0 +1,18 @@
+/* 제목 요소에 글자 크기 지정하기 */
+body {
+  background-color: rgb(0 0 255/0.4);
+  color: dodgerblue;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  padding: 20px;
+  background-color: aliceblue;
+  border-width: 7px 0 7px 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+p {
+  background-color: aliceblue;
+  padding: 20px;
+}
