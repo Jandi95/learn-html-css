@@ -1,0 +1,55 @@
+body {
+  padding: 10%;
+}
+
+.term_section {
+  background: #eee linear-gradient(180deg, #ccc 0%, #eee 100%);
+  padding: 16px;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3;
+  max-width: 250px;
+
+  h2 {
+    font-size: 0.9375rem;
+    margin-bottom: 16px;
+  }
+}
+
+.term {
+  padding-right: 76px;
+  position: relative;
+  min-height: 68px;
+  margin-bottom: 12px;
+
+  .term_subject {
+    color: #296897;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .term_brief {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #181818;
+  }
+
+  .term_thumnail {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:nth-of-type(odd) {
+    padding: 0 0 0 76px;
+
+    .term_thumnail {
+      right: initial;
+      left: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
