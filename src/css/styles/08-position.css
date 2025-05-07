@@ -1,0 +1,35 @@
+/* relative 값 */
+.like {
+  background-color: #121212;
+
+  .lion {
+    border: 1px solid red;
+    background-color: rgb(255 255 80/1);
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+/* fixed 값 */
+h1 {
+  background-color: pink;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+/* absolute */
+.bootcamp {
+  border: 1px solid blue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  span {
+    background-color: rgb(100 255 30/0.7);
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}

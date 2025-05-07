@@ -1,0 +1,81 @@
+/* 일반 CSS */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+}
+
+.parent .child {
+  color: white;
+  font-size: 16px;
+}
+
+/* CSS 중첩 */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+
+  .child {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+/* 일반 CSS */
+.button {
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button::before {
+  content: '★';
+}
+
+/* CSS 중첩 */
+.button {
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: white;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &::before {
+    content: '★';
+  }
+}
+
+/* 일반 CSS */
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* CSS 중첩 */
+.container {
+  width: 100%;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+/* SASS와 차이점 */
+/* CSS는 아래와 같이 &기호를 부모 요소의 이름의 일부로 치환할 수 없다. */
+.menu__list {
+  &__item {
+    color: green;
+  }
+}
