@@ -1,0 +1,57 @@
+body {
+  padding: 30px;
+  color: #121212;
+
+  h1 {
+    text-align: center;
+    margin: 40px 0 30px;
+  }
+}
+
+/* 테이블 스타일링 */
+.table-wrap {
+  max-height: 500px;
+  overflow: auto;
+}
+
+.table-styling {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+  position: relative;
+  border: 1px solid #121212;
+
+  thead {
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  thead,
+  tfoot {
+    background: #121212;
+    color: #fff;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #dfdfdf;
+  }
+
+  td,
+  th {
+    padding: 15px 0;
+  }
+
+  .number {
+    width: 10%;
+  }
+  .name {
+    width: 20%;
+  }
+  .email {
+    width: 40%;
+  }
+  .phone {
+    width: 30%;
+  }
+}
