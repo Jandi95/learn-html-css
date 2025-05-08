@@ -19,7 +19,7 @@ h1 {
   bottom: 50px;
 }
 
-/* absolute */
+/* absolute 값 */
 .bootcamp {
   border: 1px solid blue;
   position: fixed;
@@ -32,4 +32,11 @@ h1 {
     top: 20px;
     left: 0;
   }
+}
+
+/* sticky 값 */
+.frontend {
+  background: var(--mint);
+  position: sticky;
+  top: 0;
 }
