@@ -1,0 +1,28 @@
+/* 예외 설정 */
+@property --text-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f0c;
+}
+
+:root {
+  --main_color: rgb(118, 255, 100);
+  --red: rgb(255, 82, 82);
+}
+
+body {
+  color: var(--main_color);
+  padding: 50px;
+  background: #303033;
+}
+
+a {
+  --text-color: var(--pink, #f0f);
+
+  span {
+  }
+}
+
+h1 {
+  box-shadow: 5px 5px 5px 5px var(--red);
+}
