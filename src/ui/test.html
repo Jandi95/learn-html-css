@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <style>
+      body {
+        background: #7d6f5d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      a {
+        position: relative;
+        background: #e27662;
+        display: block;
+        width: 600px;
+        padding: 30px;
+
+        span {
+          display: block;
+          font-size: 32px;
+          color: #fff;
+          font-weight: 700;
+          margin-bottom: 40px;
+        }
+
+        svg {
+          --icon_color: rgb(255 255 255/0.4);
+          width: 40px;
+        }
+
+        img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          max-width: 65%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">
+      <span>브로슈어<br />다운받기</span>
+      <svg fill="var(--icon_color)" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <g data-name="Layer 2" id="Layer_2"><path d="M15.31,6.85a1,1,0,0,0,1,1h6.51L6.17,24.5a1,1,0,0,0,1.41,1.41L24.21,9.28v6.46a1,1,0,1,0,2,0v-9a.9.9,0,0,0-.9-.9h-9A1,1,0,0,0,15.31,6.85Z" /></g>
+      </svg>
+      <img src="/src/assets/cafew/brochure-@2x.png" alt="" />
+    </a>
+  </body>
+</html>
