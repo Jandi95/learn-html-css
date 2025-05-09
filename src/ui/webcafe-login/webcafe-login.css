@@ -1,0 +1,142 @@
+body {
+  padding: 5%;
+}
+
+/* 컴포넌트 컨테이너 */
+.component_wrap {
+  > div {
+    margin: 20px 0;
+  }
+}
+
+/* 입력서식 컴포넌트 스타일링 */
+.form_input {
+  --label_size: 60px;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  label {
+    font-size: 0.875rem;
+  }
+
+  input {
+    font-size: 0.875rem;
+    width: 100%;
+    height: 24px;
+  }
+}
+
+/* 버튼 컴포넌트 스타일링 */
+.form_button {
+  --button_color: #333;
+
+  button {
+    display: block;
+    padding: 0 10px;
+    margin: 0;
+    background-color: transparent;
+    border: 1px solid var(--button_color);
+    color: var(--button_color);
+    border-radius: 4px;
+    font-size: 0.875rem;
+  }
+
+  &.fill button {
+    background-color: var(--button_color);
+    color: #fff;
+  }
+}
+
+/* 링크 컴포넌트 스타일링 */
+.link_button {
+  --link_color: #ed552f;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.875rem;
+
+  i {
+    color: var(--link_color);
+  }
+}
+
+/* 웹카페 로그인 폼 스타일링 */
+.webcafe_login {
+  max-width: 768px;
+  --headline_color: yellow;
+  --start_color: #e8832e;
+  --end_color: #ed552f;
+
+  background: var(--end_color) radial-gradient(circle at right top, var(--start_color), var(--end_color));
+  padding: 12px;
+
+  /* 제목 */
+  .headline {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--headline_color);
+    margin-bottom: 8px;
+  }
+
+  form,
+  .hyperlink {
+    background: #fff;
+  }
+
+  form {
+    padding: 8px 72px 8px 8px;
+
+    @media (width >= 400px) {
+      position: relative;
+    }
+  }
+
+  .hyperlink {
+    border-top: 1px solid #ccc;
+    padding: 8px;
+    display: flow-root;
+
+    .link_button {
+      float: left;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  /* 입력서식 */
+  .form_input {
+    &:first-child {
+      margin-bottom: 8px;
+    }
+
+    @media (width >= 400px) {
+      label {
+        width: 56px;
+      }
+      input {
+        width: calc(100% - 56px);
+      }
+    }
+  }
+
+  .form_button {
+    --button_color: #ed552f;
+
+    @media (width >= 400px) {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+
+      button {
+        height: 56px;
+      }
+    }
+  }
+}
