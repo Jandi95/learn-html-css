@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100svh;
+}
+
+.container {
+  background-color: #ffc;
+  inline-size: 100%;
+  block-size: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  .header,
+  .navigation,
+  .footer {
+    width: 100%;
+  }
+
+  .sidebar {
+    background-color: #fcf;
+    width: 200px;
+  }
+
+  .main-content {
+    background-color: #cfc;
+    flex-grow: 1;
+  }
+}
