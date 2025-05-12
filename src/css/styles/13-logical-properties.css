@@ -1,0 +1,25 @@
+/* size(width, height) */
+.lion {
+  writing-mode: horizontal-tb;
+  background-color: #ffc;
+  inline-size: 500px;
+  block-size: 300px;
+}
+
+/* inset */
+.like {
+  background: #cfc;
+  position: fixed;
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+}
+
+.bootcamp {
+  background-color: #ccf;
+  text-align: end;
+
+  span {
+    background-color: #cfc;
+    float: inline-end;
+  }
+}
