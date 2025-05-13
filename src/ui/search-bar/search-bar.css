@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+:root {
+  --green-100: #03cc5c;
+  --green-200: #1bf008;
+  --green-300: #03cca8;
+
+  --gray-100: #bcc3c7;
+  --gray-200: #9b9a90;
+  --gray-300: #6d7478;
+
+  --start-color: var(--green-200);
+  --end-color: var(--green-300);
+
+  --green_gradient: linear-gradient(-45deg, var(--green-300) 0%, var(--green-200) 100%);
+}
+
 body {
   padding: 5%;
 }
@@ -22,7 +37,7 @@ input {
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 1000;
-    background: linear-gradient(180deg, rgba(27, 240, 8, 1) 0%, rgba(3, 204, 168, 1) 100%);
+    background: var(--green-200) var(--green_gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -55,6 +70,29 @@ input {
   }
 }
 
+/* 컴포넌트 - 그라디언트 버튼 */
+.circle-btn {
+  --circle-btn-size: 1.5rem;
+
+  inline-size: var(--circle-btn-size);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  background: var(--green-200) var(--green_gradient);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    background-color: #fff;
+    inline-size: calc(var(--circle-btn-size) / 3);
+    aspect-ratio: inherit;
+    border-radius: inherit;
+  }
+}
+
 /* 비활성화 버튼 스타일링 */
 button[disabled],
 button:disabled {
@@ -84,5 +122,59 @@ button:disabled {
 
   input:focus-visible {
     box-shadow: 0 0 1px 2px green;
+  }
+}
+
+/* 검색바 */
+.search-bar {
+  --form_inline: 24px;
+
+  border-radius: 9999px;
+  border: 1px solid var(--green-100);
+  padding: 12px 12px 12px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 12px;
+
+  &:focus-within {
+    box-shadow: 0px 4px 4px 0px rgba(68, 131, 63, 0.15);
+  }
+
+  a {
+    flex-shrink: 0;
+
+    svg {
+      display: block;
+    }
+  }
+
+  .circle-btn {
+    flex-shrink: 0;
+  }
+
+  form {
+    display: contents;
+
+    .form-input {
+      flex-grow: 1;
+      margin-inline-end: 4px;
+
+      input {
+        inline-size: 100%;
+        border: 0;
+        block-size: auto;
+        padding: 0;
+        color: #607478;
+
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
   }
 }

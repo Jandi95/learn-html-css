@@ -15,7 +15,7 @@
     <hr />
     <h2 style="margin-bottom: 30px">컴포넌트</h2>
     <h3 style="margin-bottom: 10px">로고 컴포넌트</h3>
-    <figure>
+    <figure class="logo">
       <figcaption>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_2225_3)" />
@@ -29,6 +29,10 @@
         <figcaption id="logoShort" class="sr-only">네이버</figcaption>
       </figcaption>
     </figure>
+    <!-- <em class="text-logo">
+      <span class="text" aria-hidden="true">n</span>
+      <span class="sr-only">네이버</span>
+    </em> -->
     <h3 style="margin: 30px 0 10px">입력서식 컴포넌트</h3>
     <!-- 레이블 표시 -->
     <div class="form-input">
@@ -45,10 +49,37 @@
       <label for="input-0" class="sr-only">레이블</label>
       <input id="input-0" name="input" type="text" placeholder="플레이스홀더" required />
     </div>
-
-    <!-- <em class="text-logo">
-      <span class="text" aria-hidden="true">n</span>
-      <span class="sr-only">네이버</span>
-    </em> -->
+    <h3 style="margin: 30px 0 10px">버튼 컴포넌트</h3>
+    <!-- 비활성 -->
+    <button type="button" disabled>버튼</button>
+    <!-- 그라디언트 -->
+    <button class="circle-btn" type="button" aria-label="레이블"></button>
+    <hr />
+    <h2 style="margin-bottom: 30px">조립</h2>
+    <div class="search-bar">
+      <a href="#" title="홈으로 이동">
+        <figure class="logo">
+          <figcaption>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_2225_3)" />
+              <defs>
+                <linearGradient id="paint0_linear_2225_3" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#1BF008" />
+                  <stop offset="1" stop-color="#03CCA8" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <figcaption id="logoShort" class="sr-only">네이버</figcaption>
+          </figcaption>
+        </figure>
+      </a>
+      <form action="/" method="GET">
+        <div class="form-input">
+          <label for="input-1" class="sr-only">검색어</label>
+          <input id="input-1" name="keyword" type="search" placeholder="검색어를 입력해주세요." required />
+        </div>
+        <button class="circle-btn" type="submit" aria-label="검색"></button>
+      </form>
+    </div>
   </body>
 </html>
