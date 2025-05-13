@@ -1,0 +1,165 @@
+:root {
+  --red_500: #e50914;
+  --gray_500: #757575;
+  --green_400: #58e590;
+  --xsmall_font_size: 0.75rem;
+  --small_font_size: 0.875rem;
+  --basic_font_size: 1rem;
+  --form_height: 3.75rem;
+
+  --view_light_background: #ffffff;
+}
+
+body {
+  padding: 5%;
+  background-color: #010101;
+
+  h1,
+  h2,
+  h3 {
+    color: #fff;
+  }
+}
+
+/* 컴포넌트 - 입력서식 */
+.form_input {
+  font-size: var(--basic_font_size);
+
+  &:has(input:not(:placeholder-shown)) label {
+    display: block;
+  }
+
+  > div {
+    background-color: var(--view_light_background);
+    border-top: 3px solid var(--view_light_background);
+    border-bottom: 3px solid var(--view_light_background);
+    padding-inline: 1.25rem;
+    block-size: var(--form_height);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    &:has(input:user-invalid) {
+      border-bottom: 3px solid var(--red_500);
+    }
+
+    input {
+      background-color: transparent;
+      border: 0;
+      padding: 0;
+      line-height: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    label {
+      display: none;
+      font-size: var(--xsmall_font_size);
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--red_500);
+    }
+  }
+
+  .error {
+    display: block;
+    margin-top: 0.3125rem;
+    padding-inline-start: 1.25rem;
+    color: var(--red_500);
+    font-size: var(--small_font_size);
+  }
+}
+
+/* 컴포넌트 - 버튼 */
+.form_button {
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border: 0;
+    border-radius: 0;
+    padding: 0 20px;
+    block-size: var(--form_height);
+    background-color: var(--red_500);
+    color: #fff;
+
+    &:focus-visible {
+      outline: 2px solid var(--green_400);
+    }
+
+    &[disabled],
+    &:disabled {
+      background-color: var(--gray_500);
+    }
+  }
+}
+
+/* 컴포넌트 - 에러메세지 및 버튼 활성화 */
+.error_set {
+  .error {
+    display: none;
+  }
+
+  &:has(input:user-invalid) .error {
+    display: block;
+  }
+
+  &:has(input:user-invalid) button {
+    background-color: var(--gray_500);
+  }
+}
+
+.promotion_wrap {
+  .form_row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    .form_input {
+      flex-grow: 1;
+    }
+
+    .form_button {
+      flex-shrink: 0;
+      font-size: 1.375rem;
+      font-weight: 700;
+    }
+  }
+
+  @media (width <= 768px) {
+    --form_height: 2.5rem;
+
+    .form_row {
+      flex-flow: column wrap;
+      align-items: center;
+      gap: 12px;
+
+      .form_input {
+        position: relative;
+
+        > div {
+          border-radius: 9999px;
+
+          &:has(input:user-invalid) {
+            border: 3px solid var(--red_500);
+          }
+
+          label {
+            position: absolute;
+            inset: -20px auto auto 20px;
+          }
+        }
+      }
+
+      .form_button {
+        button {
+          font-size: var(--small_font_size);
+          border-radius: 9999px;
+        }
+      }
+    }
+  }
+}

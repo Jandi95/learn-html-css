@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>netflix</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/netflix/netflix.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지</a><br />
+    <h1>netflix</h1>
+    <hr />
+    <h2 style="margin: 30px 0">컴포넌트</h2>
+    <h3 style="margin: 20px 0">입력서식</h3>
+    <div class="form_input">
+      <div>
+        <label for="input00">레이블명</label>
+        <input id="input00" type="타입" name="네임" placeholder="플레이스홀더" required />
+      </div>
+      <span class="error">에러메세지</span>
+    </div>
+    <h3 style="margin: 20px 0">버튼</h3>
+    <div class="form_button">
+      <button type="타입">
+        버튼명
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3431 0.928941L21.7071 7.2929C22.0976 7.68343 22.0976 8.31659 21.7071 8.70712L15.3431 15.0711C14.9526 15.4616 14.3195 15.4616 13.9289 15.0711C13.5384 14.6806 13.5384 14.0474 13.9289 13.6569L18.5858 9.00001H1C0.447715 9.00001 0 8.55229 0 8.00001C0 7.44772 0.447715 7.00001 1 7.00001H18.5858L13.9289 2.34315C13.5384 1.95263 13.5384 1.31947 13.9289 0.928941C14.3195 0.538416 14.9526 0.538416 15.3431 0.928941Z" fill="currentColor" />
+        </svg>
+      </button>
+    </div>
+    <h3 style="margin: 20px 0">에러메세지 및 버튼 활성화</h3>
+    <form method="get" action="/">
+      <div class="form_row error_set">
+        <div class="form_input">
+          <div>
+            <label for="input01">이메일 주소</label>
+            <input id="input01" type="email" name="inputEmail" placeholder="이메일 주소" required />
+          </div>
+          <span class="error">에러메세지</span>
+        </div>
+        <div class="form_button">
+          <button type="submit">
+            30일 무료 이용
+            <svg aria-hidden="true" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3431 0.928941L21.7071 7.2929C22.0976 7.68343 22.0976 8.31659 21.7071 8.70712L15.3431 15.0711C14.9526 15.4616 14.3195 15.4616 13.9289 15.0711C13.5384 14.6806 13.5384 14.0474 13.9289 13.6569L18.5858 9.00001H1C0.447715 9.00001 0 8.55229 0 8.00001C0 7.44772 0.447715 7.00001 1 7.00001H18.5858L13.9289 2.34315C13.5384 1.95263 13.5384 1.31947 13.9289 0.928941C14.3195 0.538416 14.9526 0.538416 15.3431 0.928941Z" fill="currentColor" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </form>
+    <hr />
+    <h2 style="margin: 30px 0">조립</h2>
+    <div class="promotion_wrap">
+      <form method="POST" action="/">
+        <div class="form_row error_set">
+          <div class="form_input">
+            <div>
+              <label for="input01">이메일 주소</label>
+              <input id="input01" type="email" name="inputEmail" placeholder="이메일 주소" required />
+            </div>
+            <span class="error">정확한 이메일 주소를 입력하세요.</span>
+          </div>
+          <div class="form_button">
+            <button type="submit">
+              30일 무료 이용
+              <svg aria-hidden="true" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3431 0.928941L21.7071 7.2929C22.0976 7.68343 22.0976 8.31659 21.7071 8.70712L15.3431 15.0711C14.9526 15.4616 14.3195 15.4616 13.9289 15.0711C13.5384 14.6806 13.5384 14.0474 13.9289 13.6569L18.5858 9.00001H1C0.447715 9.00001 0 8.55229 0 8.00001C0 7.44772 0.447715 7.00001 1 7.00001H18.5858L13.9289 2.34315C13.5384 1.95263 13.5384 1.31947 13.9289 0.928941C14.3195 0.538416 14.9526 0.538416 15.3431 0.928941Z" fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
