@@ -24,3 +24,8 @@ a {
   text-decoration: none;
   color: currentColor;
 }
+
+svg {
+  inline-size: 100%;
+  block-size: auto;
+}
