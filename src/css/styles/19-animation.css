@@ -1,0 +1,26 @@
+body {
+  padding: 5%;
+}
+
+.like {
+  border: 5px solid currentColor;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  text-align: center;
+  align-content: center;
+  transition-property: background, inline-size, border-radius;
+  transition-duration: 0.4s, 0.4s, 0.4s;
+  transition-delay: 0s, 0s, 0.4s;
+  transition-timing-function: ease-in;
+
+  /* &:hover {
+    background-color: pink;
+    border-radius: 50%;
+    inline-size: 300px;
+  } */
+  &.transition {
+    background-color: pink;
+    border-radius: 50%;
+    inline-size: 300px;
+  }
+}
