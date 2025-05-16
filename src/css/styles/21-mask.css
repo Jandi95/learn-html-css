@@ -1,0 +1,53 @@
+body {
+  padding: 5%;
+
+  > div {
+    width: max-content;
+  }
+}
+
+@property --size {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@keyframes mask-anim {
+  0% {
+    --size: 0%;
+  }
+  100% {
+    --size: 60%;
+  }
+}
+
+.like {
+  --size: 0;
+
+  background: blue;
+  inline-size: 100px;
+  block-size: 100px;
+
+  /* mask-image: url('/src/assets/svg/star.svg'); */
+  /* mask-repeat: no-repeat; */
+  /* mask-size: cover; */
+  /* mask-image: linear-gradient(#000 0% 50%, transparent 50% 100%); */
+
+  /* 작은원에서 큰원 */
+  mask-image: radial-gradient(red 0 var(--size), transparent var(--size) 100%);
+  animation: mask-anim 1s infinite ease-in-out alternate;
+
+  /* mask-image: 
+    linear-gradient(0deg, transparent 0 40%, #000 40% 60%, transparent 60% 100%),
+    linear-gradient(90deg, transparent 0 40%, #000 40% 60%, transparent 60% 100%)
+  ; */
+}
+
+.lion{
+  inline-size: 50px;
+  block-size: 50px;
+  
+  /* svg(코드 수정을 통해 투명한 부분 설정) 그라데이션 넣기 */
+  background-image:  linear-gradient(red, green);
+  mask: url('/src/assets/svg/rice.svg') 0 0 / cover;
+}

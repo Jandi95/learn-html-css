@@ -1,0 +1,107 @@
+body {
+  padding: 5%;
+  background-color: #292929;
+  color: #fff;
+}
+
+@keyframes zoom {
+  from {
+    width: 100px;
+    background-color: #ffc;
+  }
+
+  to {
+    width: 300px;
+    background-color: #ccf;
+  }
+}
+
+.zoom .target-animation {
+  border: 5px solid currentColor;
+  padding: 10px;
+  inline-size: 100px;
+  /* animation-name: zoom;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused; */
+
+  animation: zoom 3s infinite alternate ease-in-out 0.4s forwards paused;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+
+  .case {
+    padding: 30px 30px 50px 30px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+
+    strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .controls {
+      margin-bottom: 40px;
+
+      button {
+        background-color: #fff;
+        padding: 10px 30px;
+        font-weight: bold;
+        border-radius: 9999px;
+      }
+    }
+
+    .target-animation {
+      border-radius: 4px;
+      padding: 1em;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      background-color: rgb(37, 148, 192);
+    }
+  }
+}
+
+/* Fade 애니메이션 */
+.container .fade .target-animation {
+  animation: fade 1s infinite alternate ease-in-out forwards paused;
+}
+
+.container .shrink .target-animation {
+  animation: shrink 1s infinite alternate ease-in-out forwards paused;
+}
+
+.container .bounce .target-animation {
+  animation: bounce 1s infinite alternate ease-in-out forwards paused;
+}
+
+.container .shake .target-animation {
+  animation: shake 1s infinite alternate ease-in-out forwards paused;
+}
+
+.container .spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(red 0 25%, orange 25% 50%, yellow 50% 75%, green 75% 100%);
+  animation: spin 0.4s infinite linear paused;
+}
+
+.container .pulse .target-animation {
+  animation: pulse 0.4s infinite alternate ease-in-out forwards paused;
+}
+
+.container .flip .target-animation {
+  animation: flip 1s infinite ease-in-out forwards paused;
+}
+
+.container .wobble .target-animation {
+  animation: wobble 1s infinite ease-in-out forwards paused;
+}
