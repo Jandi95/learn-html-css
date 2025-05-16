@@ -1,0 +1,39 @@
+body{
+  padding: 5%;
+}
+
+.container{
+  >div{
+    padding: 20px;
+  }
+
+  /* 단의 너비를 지정 */
+  /* 구분선 */
+  .like{
+    column-width: 200px;
+    column-rule: 1px dashed #ccc;
+  }
+  /* 단의 갯수 지정 */
+  /* 단 여백 */
+  .lion{
+    column-count: 2;
+    column-rule: 1px dashed #ccc;
+    column-gap: 10em;
+
+  }
+  /* 단의 너비,갯수 지정 */
+  .bootcamp{
+    columns: 200px 2;
+
+    span{
+      font-size:24px;
+      color: #fff;
+      background-color: darkblue;
+      display: block;
+      column-span: all;
+      text-align: center;
+      padding: 10px 0;
+      margin-block: .5em;
+    }
+  }
+}
