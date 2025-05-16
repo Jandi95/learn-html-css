@@ -40,7 +40,7 @@ body {
   .case {
     padding: 30px 30px 50px 30px;
     border: 2px solid #fff;
-    border-radius: 8px;
+    border-radius: 16px;
 
     strong {
       display: block;
@@ -104,4 +104,37 @@ body {
 
 .container .wobble .target-animation {
   animation: wobble 1s infinite ease-in-out forwards paused;
+}
+
+.container .rotateMix .target-animation {
+  --rotation: 0deg;
+
+  inline-size: 120px;
+  aspect-ratio: 1;
+  animation: rotateMix 1s infinite ease-in-out forwards paused;
+  position: relative;
+  margin: 0 auto;
+  background: #fff url('/src/assets/face/face1.jpg') no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+
+  &::before, &::after{
+    content:"";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    /* background: conic-gradient(from var(--rotation), rgb(255, 65, 65), rgb(243, 243, 93), rgb(98, 255, 98), rgb(57, 57, 255), rgb(255, 65, 65)); */
+    background: conic-gradient(from var(--rotation), rgb(255, 159, 175), rgb(255, 149, 110) , rgb(225, 105, 255), rgb(255, 159, 175));
+    z-index: -1;
+    box-sizing: content-box;
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 2px;
+    animation: rotateMix 1s infinite linear paused;
+    border-radius: 50%;
+  }
+
+  &::before{
+    filter: blur(20px);
+  }
 }

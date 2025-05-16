@@ -84,3 +84,18 @@
     transform: translateX(-5px) rotate(-1deg);
   }
 }
+
+@property --rotation{
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotateMix {
+  0%{
+    --rotation : 0deg;
+  }
+  100%{
+    --rotation : 360deg;
+  }
+}
