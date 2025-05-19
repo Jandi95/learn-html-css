@@ -1,0 +1,15 @@
+:root {
+  /* lignt-dark() 함수 사용을 위한 전제조건 / 현 시점에서 모바일에서 지원 안한다는 이슈 있음 */
+  color-scheme: light dark;
+}
+
+body {
+  padding: 5%;
+  background-color: light-dark(#ffc, green);
+  color: light-dark(#121212, #121212);
+  /* background-color: goldenrod;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #292929;
+  } */
+}
