@@ -1,0 +1,144 @@
+:root {
+  --gray-100: #eee;
+  --gray-200: #b3b3b3;
+  --gray-500: #4d4d4d;
+}
+
+body {
+  padding: 5%;
+  letter-spacing: -0.02em;
+  color: var(--gray-500);
+}
+
+.cart-header {
+  font-weight: 700;
+  font-size: 24px;
+  border-bottom: 1px solid currentColor;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding-block-end: 7px;
+
+  &::before {
+    content: '';
+    inline-size: 48px;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    mask-image: url('/src/assets/cart/cart.svg');
+  }
+}
+
+.cart-product {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 5px 8px;
+  column-gap: 12px;
+
+  figure {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: 12px;
+
+    img {
+      inline-size: 64px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    figcaption {
+      display: flex;
+      flex-flow: column nowrap;
+      row-gap: 8px;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      transform: translate(0, 2px);
+
+      a {
+        font-size: 20px;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  div {
+    background: var(--gray-100);
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    display: inline-flex;
+    padding: 6px 8px;
+    margin-left: auto;
+
+    .button-increase,
+    .button-decrease {
+      --button-size: 16px;
+
+      inline-size: 16px;
+      aspect-ratio: 1;
+      display: inline-grid;
+      grid-template-columns: var(--button-size);
+      grid-template-rows: var(--button-size);
+      place-items: center;
+      padding: 0;
+      border: 0;
+
+      &::before,
+      &:after {
+        content: '';
+        grid-area: 1 / 1;
+        inline-size: 5px;
+        block-size: 1px;
+        background-color: currentColor;
+      }
+    }
+
+    .button-decrease {
+      order: 1;
+
+      &::after {
+        rotate: 90deg;
+      }
+    }
+
+    output {
+      padding-inline: 3px 2px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+  }
+}
+
+.cart-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: end;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  padding-top: 21px;
+  border-top: 1px solid currentColor;
+
+  [aria-hidden='true'] {
+    margin-inline: 0.125em;
+  }
+}
+
+.cart {
+  padding: 20px;
+  border: 6px solid currentColor;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 20px;
+}
