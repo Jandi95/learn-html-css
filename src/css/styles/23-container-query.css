@@ -1,0 +1,39 @@
+body {
+  padding: 3%;
+}
+
+.wrapper {
+  border: 1px solid red;
+  padding: 10px;
+  container-type: inline-size;
+
+  .bootcamp {
+    display: flex;
+    flex-flow: column nowrap;
+
+    div {
+      block-size: 200px;
+      text-align: center;
+      align-content: center;
+      font-size: 2em;
+      font-weight: 800;
+    }
+
+    .like {
+      background-color: pink;
+    }
+
+    .lion {
+      background-color: gold;
+    }
+
+    @container (width > 600px) {
+      flex-direction: row;
+
+      div {
+        font-size: 1em;
+        color: white;
+      }
+    }
+  }
+}

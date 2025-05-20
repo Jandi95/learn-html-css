@@ -1,0 +1,41 @@
+body {
+  padding: 3%;
+  /* background-color: #010101; */
+}
+
+.combo-box {
+  display: inline-grid;
+  grid-template-columns: auto;
+  place-items: center;
+  border: 1px solid #757575;
+  border-radius: 2px;
+
+  .form-combo,
+  svg {
+    grid-area: 1/1/2/2;
+  }
+
+  .form-combo {
+    grid-column: 1/4;
+    grid-row: 1/1;
+
+    select {
+      appearance: none;
+      border: 0;
+      background-color: transparent;
+      color: #757575;
+      padding: 12px 34px;
+    }
+  }
+
+  svg {
+    &:nth-of-type(1) {
+      justify-self: flex-start;
+    }
+
+    &:nth-of-type(2) {
+      pointer-events: none;
+      justify-self: flex-end;
+    }
+  }
+}
