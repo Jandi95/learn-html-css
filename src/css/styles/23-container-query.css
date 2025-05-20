@@ -2,38 +2,51 @@ body {
   padding: 3%;
 }
 
-.wrapper {
-  border: 1px solid red;
-  padding: 10px;
+.container {
   container-type: inline-size;
+}
 
-  .bootcamp {
-    display: flex;
-    flex-flow: column nowrap;
+.card-component {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
 
-    div {
-      block-size: 200px;
+  figure {
+    img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+    figcaption {
       text-align: center;
-      align-content: center;
-      font-size: 2em;
-      font-weight: 800;
+      font-size: 14px;
+      color: gray;
+      font-style: italic;
+      margin-block-start: 5px;
     }
+  }
 
-    .like {
-      background-color: pink;
-    }
+  p {
+    line-height: 1.4;
+    text-align: justify;
+  }
 
-    .lion {
-      background-color: gold;
-    }
+  @container (width >= 480px) {
+    flex-direction: row;
+  }
+}
 
-    @container (width > 600px) {
-      flex-direction: row;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 
-      div {
-        font-size: 1em;
-        color: white;
-      }
+  .container {
+    &:nth-child(n + 5) {
+      grid-column: span 2;
     }
   }
 }
