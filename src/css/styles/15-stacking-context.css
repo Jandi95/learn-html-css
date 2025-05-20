@@ -1,0 +1,73 @@
+body {
+  padding: 3%;
+}
+
+.bootcamp {
+  border: 2px solid red;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  position: relative;
+  background-color: gold;
+  isolation: isolate;
+
+  .like,
+  .lion {
+    inline-size: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+  }
+
+  .like {
+    background-color: yellowgreen;
+  }
+
+  .lion {
+    background-color: violet;
+    inline-size: 60%;
+    z-index: -1;
+  }
+
+  .frontend {
+    inline-size: 100%;
+    block-size: 100%;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+  }
+}
+
+.wrapper {
+  border: 2px solid blue;
+  padding: 10px 100px;
+  display: flex;
+  flex-flow: row wrap;
+
+  div {
+    inline-size: 100px;
+    aspect-ratio: 1;
+    text-align: center;
+    align-content: center;
+    margin-inline-start: -40px;
+    border-radius: 50%;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .box1 {
+    background-color: yellow;
+  }
+  .box2 {
+    background-color: pink;
+  }
+  .box3 {
+    background-color: skyblue;
+  }
+  .box4 {
+    background-color: orange;
+  }
+}
