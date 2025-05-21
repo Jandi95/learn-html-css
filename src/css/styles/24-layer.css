@@ -1,0 +1,38 @@
+body {
+  padding: 3%;
+}
+
+@layer module, state;
+
+@layer state {
+  body {
+    background-color: pink;
+  }
+
+  .alert {
+    background-color: pink;
+    padding: 1em;
+    color: green;
+  }
+  p {
+    border: 1px solid red;
+  }
+}
+
+@layer module {
+  body {
+    background-color: #ccf;
+  }
+  .alert {
+    background-color: darkblue;
+    padding: 1em;
+    color: green;
+  }
+  p {
+    border: 1px solid red;
+  }
+}
+
+body {
+  background-color: limegreen;
+}
